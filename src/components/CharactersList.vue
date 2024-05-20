@@ -28,7 +28,14 @@ import { ref, onMounted, watch } from 'vue';
 import axios from 'axios';
 import CharacterCard from './CharacterCard.vue';
 
-const characters = ref([]);
+interface Character {
+    id: number;
+    name: string;
+    status: string;
+    image: string;
+}
+
+const characters = ref<Character[]>([]);
 const currentPage = ref(1);
 const totalPages = ref(1);
 const filters = ref({ name: '', status: '' });
