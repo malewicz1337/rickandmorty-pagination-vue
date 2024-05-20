@@ -117,4 +117,9 @@ onMounted(fetchCharacters);
     gap: 0.5rem;
     align-items: center;
 }
+@media (max-width: 1080px) {
+    .characters {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 </style>
